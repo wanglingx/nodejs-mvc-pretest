@@ -2,4 +2,4 @@
 before running shoud be install command " npm i "
 server run command " npm run dev "
 
-!!! อนุญาติเข้าถึงเฉพาะผู้ที่ถูก access เท่านั้น หลังสอบเสร็จเดี๋ยวเปิดโครงใหม่หลังสอบเสร็จ !!!
+!!! อนุญาติเข้าถึงเฉพาะผู้ที่ถูก access เท่านั้น !!!
