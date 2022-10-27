@@ -122,27 +122,28 @@ class Operator {
 
     editInfoOperator = (user,res) => {
         let sql = `UPDATE Employee
-        SET name =?,
-            Tell =?,
-            Address =?,
-            salary =?,
-            dept_name =?,
-            head_id=?,
-            level =?
+        SET name = ?,
+            Tell = ?,
+            Address = ?,
+            salary = ?,
+            dept_name = ?,
+            head_id = ?,
+            level = ?
         WHERE employee_id = ?`
         connection.query(sql, [
-            user.employee_name,
+            user.name,
             user.Tell,
             user.Address,
             user.salary,
             user.dept_name,
             user.head_id,
-            user.level
+            user.level,
+            user.employee_id
         ], function (err) {
             if (err) {
                 console.log(err)
             } else {
-                return res.status(201).rediract("/showInformation");
+                return res.status(201).redirect("/showInformation");
             }
         })
     }

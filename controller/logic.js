@@ -5,7 +5,7 @@ const fs = require('fs');
 const { use } = require('../routes/router');
 class Logic {
 
-    addEmployeeLogic = async (employee, res) => {
+    addEmployeeLogic = (employee, res) => {
 
         //random name
         let name = '';
@@ -116,9 +116,9 @@ class Logic {
             user.level = 'jounior level';
         }
         else if (user.salary > 40000 && employee.salary < 70000) {
-            user.level = 'middle level'
+            user.level = 'middle level';
         } else {
-            user.level = 'senior level'
+            user.level = 'senior level';
         }
         new Operator().editInfoOperator(user, res);
     }

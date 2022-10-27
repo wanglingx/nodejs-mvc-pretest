@@ -38,12 +38,14 @@ class Endpoint {
     }
 
     editUserEndpoint = (req, res) => {
-        this.employee.employee_id = req.body.employee_id;
+        var id = req.params.id;
+        this.employee.employee_id = id;
         this.employee.name = req.body.name;
         this.employee.Tell = req.body.Tell;
         this.employee.Address = req.body.Address;
         this.employee.salary = req.body.salary;
         this.employee.dept_name = req.body.dept_name;
+        this.employee.head_id = req.body.head_id;
         new Logic().editUserLogic(this.employee,res);
     }
 }
