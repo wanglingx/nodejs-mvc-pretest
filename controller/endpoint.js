@@ -24,10 +24,6 @@ class Endpoint {
         new Logic().deleteInfoLogic(id,res);
     }
 
-    // getDataEndpoint = (req, res) => {
-    //     new Logic().getDataLogic(res);
-    // }
-
     reportEndpoint = (req, res) => {
         new Logic().reportLogic(res);
     }

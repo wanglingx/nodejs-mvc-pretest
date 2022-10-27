@@ -57,16 +57,7 @@ class Logic {
 
         //set Head
         employee.head_id = 'Employee'
-        // let data_length = 1;
-        //     let response = await axios.post('http://localhost:3000/findHead', {dept_name: employee.dept_name});
-        //     let res_length = parseInt(response.data.response.length);
-        //         if (res_length <= 0) {
-        //             return res.status(400).send({ response: "แผนกนี้มีหัวหน้าแล้ว" })
-        //         }
-        //         else {
-        //             employee.head_id = 'H'
-        //        }
-       
+
         //add level
         if (employee.salary <= 40000) {
             employee.level = 'jounior level';
@@ -98,11 +89,7 @@ class Logic {
     deleteInfoLogic = (employee,res) => {
         new Operator().deleteInfoOperator(employee,res);
     }
-
-    // getDataLogic = (res) => {
-    //     new Operator().getDataOperator(res);
-    // }
-
+    
     reportLogic = (res) => {
         new Operator().getDataOperator(res);
     }
