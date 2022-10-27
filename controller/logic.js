@@ -2,6 +2,7 @@ const { employee } = require('../model/model');
 const { Operator } = require('./operator');
 const axios = require('axios');
 const fs = require('fs');
+const { use } = require('../routes/router');
 class Logic {
 
     addEmployeeLogic = async (employee, res) => {
@@ -106,7 +107,19 @@ class Logic {
         new Operator().getDataOperator(res);
     }
 
+    getEditUserLogic = (employee, res) => {
+        new Operator().getEditUserOperator(employee, res);
+    }
+
     editUserLogic = (user, res) => {
+        if (user.salary <= 40000) {
+            user.level = 'jounior level';
+        }
+        else if (user.salary > 40000 && employee.salary < 70000) {
+            user.level = 'middle level'
+        } else {
+            user.level = 'senior level'
+        }
         new Operator().editInfoOperator(user, res);
     }
 

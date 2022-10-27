@@ -103,6 +103,22 @@ class Operator {
         )
     }
 
+    getEditUserOperator = (employee,res) => {
+        let sql = `SELECT * FROM Employee WHERE employee_id = ?`
+        connection.query(sql,[employee],
+            function (err, data) {
+                if (err) {
+                    console.log(err)
+                }
+                else {
+                    return res.status(201).render('../view/pages/editInfo', {
+                        response: data
+                    });
+                }
+            }
+        )
+    }
+
 
     editInfoOperator = (user,res) => {
         let sql = `UPDATE Employee

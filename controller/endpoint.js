@@ -32,7 +32,18 @@ class Endpoint {
         new Logic().reportLogic(res);
     }
 
-    editUserEndpoint = (req,res) => {
+    getEditUserEndpoint = (req, res) => {
+        var edit_id = req.params.edit_id;
+        new Logic().getEditUserLogic(edit_id, res);
+    }
+
+    editUserEndpoint = (req, res) => {
+        this.employee.employee_id = req.body.employee_id;
+        this.employee.name = req.body.name;
+        this.employee.Tell = req.body.Tell;
+        this.employee.Address = req.body.Address;
+        this.employee.salary = req.body.salary;
+        this.employee.dept_name = req.body.dept_name;
         new Logic().editUserLogic(this.employee,res);
     }
 }

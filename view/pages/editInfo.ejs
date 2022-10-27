@@ -46,21 +46,36 @@
     <div class="text-center F1 font30 padding-bt padding-t bold">MVC Test of Computer Science KMITL</div>
     <div class="text-center F1 font16 padding-bt padding-t bold">Edit Your Information</div>
     
-    <div class="container-fluid padding-bt ">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-2 col-lg-3 col-xl-3 col-xxl-3"></div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
-                <form action="/addEmployee" method="POST" class="d-flex" role="search">
-                    <input name="employee_id" class="form-control me-2" type="text" placeholder="Typing your id">
-            </div>
-            <!-- <button class="btn btn-warning" type="submit">Search</button> -->
-            <div>
-                <div class="text-center padding-t ">
-                    <button class="btn btn-success" type="submit">Add Employee By random data</button>
-                    <!-- <button class="btn btn-danger" type="cancel">cancel</button> -->
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                <form>
+                        <table width="25%" border="0" id="countries">
+                            <tr>
+                                <td>Name</td>
+                                <td><input type="text" name="name" id="name" value="<%= name %>" /></td>
+                            </tr>
+                            <tr>
+                                <td>Tell</td>
+                                <td><input type="text" name="Tell" id="Tell" value="<%= Tell %>" /></td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td><input type="text" name="Address" id="Address" value="<%= Address %>" /></td>
+                            </tr>
+                            <tr>
+                                <td>salary</td>
+                                <td><input type="text" name="salary" id="salary" value="<%= salary %>" /></td>
+                            </tr>
+                            <tr>
+                                <td>dept_name</td>
+                                <td><input type="text" name="dept_name" id="dept_name" value="<%= dept_name %>" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td><input type="submit" name="Submit" value="Edit" /></td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="_method" value="PUT" />
+                    </form>
+
 </body>

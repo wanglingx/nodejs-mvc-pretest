@@ -10,7 +10,8 @@ router.get("/showInformation", new Endpoint().showInfoEndpoint);
 router.get("/deleteInfo/:id", new Endpoint().deleteInfoEndpoint);
 //router.get("/getData", new Endpoint().getDataEndpoint);
 router.get("/report", new Endpoint().reportEndpoint);
-router.post("/editUser", new Endpoint().editUserEndpoint)
+router.post("/editUser", new Endpoint().editUserEndpoint);
+router.get("/getEditUser/:edit_id", new Endpoint().getEditUserEndpoint);
 
 router.get('/', (req, res) => {
     return res.render('../view/pages/home.ejs')
